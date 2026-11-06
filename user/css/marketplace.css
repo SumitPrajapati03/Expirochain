@@ -1,0 +1,219 @@
+/* PAGE */
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f4f6f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* MAIN CONTAINER */
+
+.marketplace-container {
+    width: 95%;
+    max-width: 1500px;
+    margin: 40px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* TITLE */
+
+.market-title {
+    font-size: 30px;
+    color: #1d4ed8;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+/* SEARCH AREA */
+
+.search-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+/* PRODUCT SEARCH */
+
+.product-search {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+/* FIRM SEARCH */
+
+.firm-search {
+    display: flex;
+    gap: 10px;
+}
+
+/* INPUT FIELDS */
+
+.main-search {
+    padding: 10px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 14px;
+    background: #f8fafc;
+    width: 280px;
+}
+
+.secondary-search {
+    padding: 9px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 14px;
+    background: #f8fafc;
+    width: 200px;
+}
+
+.main-search:focus,
+.secondary-search:focus {
+    outline: none;
+    border-color: #2563eb;
+    background: white;
+}
+
+/* SEARCH BUTTON */
+
+.search-btn {
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    color: white;
+    padding: 9px 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all .2s ease;
+}
+
+.search-btn:hover {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    transform: translateY(-1px);
+}
+
+.small-btn {
+    padding: 8px 12px;
+    font-size: 13px;
+}
+
+/* TABLE */
+
+.data-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* TABLE HEADER */
+
+.data-table thead {
+    background: #1d4ed8;
+    color: white;
+}
+
+.data-table thead th {
+    padding: 13px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* HEADER RADIUS */
+
+.data-table thead th:first-child {
+    border-top-left-radius: 10px;
+}
+
+.data-table thead th:last-child {
+    border-top-right-radius: 10px;
+}
+
+/* TABLE BODY */
+
+.data-table tbody td {
+    padding: 12px;
+    text-align: center;
+    font-size: 15px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+/* HOVER */
+
+.data-table tbody tr:hover {
+    background: #f8fafc;
+}
+
+/* LAST ROW RADIUS */
+
+.data-table tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 12px;
+}
+
+.data-table tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 12px;
+    border-bottom: none;
+}
+
+/* REQUEST BUTTON */
+
+.request-btn {
+    background: #16a34a;
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.request-btn:hover {
+    background: #15803d;
+}
+
+/* REVOKE BUTTON */
+
+.revoke-btn {
+    background: #ef4444;
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.revoke-btn:hover {
+    background: #dc2626;
+}
+
+/* DISABLED / REQUESTED */
+
+.requested-btn {
+    background: #9ca3af;
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: not-allowed;
+}
+
+/* EMPTY DATA */
+
+.no-data {
+    text-align: center;
+    padding: 20px;
+    color: #64748b;
+    font-size: 15px;
+}

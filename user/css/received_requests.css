@@ -1,0 +1,232 @@
+/* PAGE */
+
+body{
+font-family:'Segoe UI', Arial, sans-serif;
+background:#f4f6f9;
+margin:0;
+padding:0;
+}
+
+/* CONTAINER */
+
+.container{
+width:95%;
+max-width:1500px;
+margin:40px auto;
+}
+
+/* CARD */
+
+.products-card{
+background:white;
+border-radius:12px;
+padding:25px;
+box-shadow:0 8px 20px rgba(0,0,0,0.05);
+}
+
+/* HEADER */
+
+.products-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:20px;
+}
+
+/* TITLE */
+
+.products-header h2{
+margin:0;
+font-size:30px;
+color:#1d4ed8;
+font-weight:700;
+}
+
+/* MY REQUEST BUTTON */
+
+.my-request-btn{
+background:linear-gradient(135deg,#3b82f6,#2563eb);
+color:white;
+padding:8px 14px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+font-size:14px;
+}
+
+.my-request-btn:hover{
+background:linear-gradient(135deg,#2563eb,#1d4ed8);
+}
+
+/* TABLE */
+
+.data-table{
+width:100%;
+border-collapse:separate;
+border-spacing:0;
+border-radius:12px;
+overflow:hidden;
+background:white;
+box-shadow:0 4px 12px rgba(0,0,0,0.05);
+}
+
+#requestTable_wrapper th{
+    text-align:center;
+padding:12px;
+}
+#requestTable_wrapper td{
+    text-align:center;
+padding:12px;
+}
+/* HEADER */
+
+.data-table thead{
+background:#1d4ed8;
+color:white;
+}
+
+.data-table thead th{
+text-align:center;
+padding:13px;
+font-size:14px;
+font-weight:500;
+}
+
+
+
+/* BODY */
+
+.data-table tbody td{
+padding:12px;
+font-size:15px;
+text-align:center;
+border-bottom:1px solid #e2e8f0;
+}
+
+/* HOVER */
+
+.data-table tbody tr:hover{
+background:#f8fafc;
+}
+
+/* STATUS COLORS */
+
+.status-approved{
+color:#16a34a;
+font-weight:600;
+}
+
+.status-pending{
+color:#f59e0b;
+font-weight:600;
+}
+
+.status-rejected{
+color:#dc2626;
+font-weight:600;
+}
+
+/* BUTTONS */
+
+.approve-btn{
+background:#16a34a;
+color:white;
+padding:6px 10px;
+border-radius:6px;
+text-decoration:none;
+font-size:13px;
+}
+
+.approve-btn:hover{
+background:#15803d;
+}
+
+.reject-btn{
+background:#dc2626;
+color:white;
+padding:6px 10px;
+border-radius:6px;
+text-decoration:none;
+font-size:13px;
+}
+
+.reject-btn:hover{
+background:#b91c1c;
+}
+
+/* EMPTY MESSAGE */
+
+.no-data{
+text-align:center;
+padding:25px;
+color:#64748b;
+font-size:16px;
+}
+
+/* POPUP */
+
+#requestPopup{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.45);
+align-items:center;
+justify-content:center;
+z-index:999;
+}
+
+.popup-card{
+background:white;
+padding:25px;
+border-radius:12px;
+width:900px;
+max-height:500px;
+overflow:auto;
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+.popup-card table{
+margin-top:10px;
+}
+
+
+/* WITHDRAW BUTTON */
+
+.withdraw-btn{
+background:#dc2626;
+color:white;
+padding:5px 10px;
+border-radius:5px;
+text-decoration:none;
+font-size:13px;
+}
+
+.withdraw-btn:hover{
+background:#b91c1c;
+}
+
+/* CLOSE BUTTON */
+
+.popup-close{
+margin-top:15px;
+background:#6b7280;
+color:white;
+padding:6px 14px;
+border:none;
+border-radius:6px;
+cursor:pointer;
+}
+
+.popup-card h3{
+margin-bottom:15px;
+font-size:18px;
+font-weight:600;
+color:#1f2937;
+}
+
+.popup-card table{
+margin-top:15px;
+}

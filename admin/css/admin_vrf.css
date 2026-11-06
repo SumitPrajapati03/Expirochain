@@ -1,0 +1,205 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f4f6f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* CONTAINER */
+
+.container {
+    width: 98%;
+    max-width: 1700px;
+    margin: 40px auto;
+}
+
+/* PAGE TITLE */
+
+h2 {
+    font-size: 26px;
+    color: #0D204F;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* EXPORT BUTTON */
+
+.header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.export-btn {
+    background: linear-gradient(135deg, #172554, #1e3a8a);
+    color: white;
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    display: inline-block;
+    transition: all 0.25s ease;
+    box-shadow: 0 2px 6px rgba(37, 99, 235, 0.25);
+    border: none;
+    cursor: pointer;
+}
+
+.export-btn:hover {
+    background: linear-gradient(135deg, #1e3a8a, #172554);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+}
+
+/* TABLE */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* HEADER */
+
+th {
+    background: #0D204F;
+    color: white;
+    padding: 14px;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* CELLS */
+
+td {
+    padding: 13px;
+    font-size: 14px;
+    border-bottom: 1px solid #e2e8f0;
+    vertical-align: top;
+}
+
+/* ROW HOVER */
+
+tr:hover {
+    background: #f8fafc;
+}
+
+/* APPROVED COLUMN */
+
+.col-approved {
+    width: 70px;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* DL COLUMN */
+
+.col-dl {
+    width: 110px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+
+/* ID COLUMN */
+
+#userTable th:nth-child(2),
+#userTable td:nth-child(2) {
+    width: 50px;
+    text-align: center;
+}
+
+/* PHONE */
+
+#userTable th:nth-child(8),
+#userTable td:nth-child(8) {
+    width: 120px;
+    text-align: center;
+}
+
+/* EMAIL */
+
+#userTable th:nth-child(9),
+#userTable td:nth-child(9) {
+    width: 200px;
+    word-break: break-all;
+    text-align: center;
+}
+
+/* ACTION COLUMN */
+
+#userTable th:nth-child(10),
+#userTable td:nth-child(10) {
+    width: 100px;
+    text-align: center;
+}
+
+/* EDIT BUTTON */
+
+.edit-btn {
+    background: linear-gradient(135deg, #0D204F, #1532d1);
+    color: white;
+    padding: 7px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    display: inline-block;
+    transition: all 0.25s ease;
+    box-shadow: 0 2px 6px rgba(37, 99, 235, 0.25);
+}
+
+.edit-btn:hover {
+    background: linear-gradient(135deg, #1532d1, #0D204F);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35);
+}
+
+.edit-btn:active {
+    transform: translateY(0px);
+    box-shadow: 0 2px 6px rgba(37, 99, 235, 0.25);
+}
+
+/* SEARCH BOX */
+
+.dataTables_filter {
+    margin-bottom: 15px;
+}
+
+.dataTables_filter input {
+    padding: 8px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 14px;
+    background: #f8fafc;
+    transition: 0.2s ease;
+}
+
+.dataTables_filter input:focus {
+    outline: none;
+    border-color: #2563eb;
+    background: white;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+}
+
+/* PAGINATION */
+
+.dataTables_paginate {
+    margin-top: 15px;
+}
+
+.dataTables_paginate .paginate_button {
+    padding: 5px 10px;
+    border-radius: 6px;
+}
+
+.dataTables_paginate .paginate_button.current {
+    background: white !important;
+    color: white !important;
+}

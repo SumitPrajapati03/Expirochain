@@ -1,0 +1,874 @@
+/* *,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+:root {
+    --bg: #f4f6fb;
+    --card: #ffffff;
+    --text: #1f2937;
+    --border: #d1d5db;
+    --primary: #2563eb;
+}
+
+
+a{
+    color: #374151;
+}
+
+body {
+    margin: 1%  ;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f4f6fb;
+    color: var(--text);
+}
+.app-header {
+    position: sticky;
+    
+    width: 100%;                 
+    height: 125px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;             
+    margin: 0;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+    z-index: 1000;
+}
+
+
+.app-header img {
+    padding-top: 5%;
+    transform: translateX(-35%);
+    height: 230px
+}
+
+
+
+.login-btn:hover {
+    background: #1e40af;
+}
+
+
+
+.login-btn {
+    display: flex;
+    align-items: center;        
+    justify-content: center;    
+
+    height: 44px;               
+    padding: 0 28px;
+
+    background: #2563eb;
+    color: #ffffff;
+    border-radius: 10px;
+    font-size: 22px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.login-btn:hover {
+    background: #1e40af;
+}
+.page-title {
+    text-align: center;
+    margin: 32px 0 18px;
+}
+
+.page-title h2 {
+    font-size: 50px;
+    color: #1f2937;
+    margin-bottom: 6px;
+}
+
+.page-title p {
+    font-size: 25px;
+    color: #6b7280;
+}
+
+
+
+.form-intro {
+    text-align: center;
+    margin: 20px auto 18px;
+}
+
+.form-intro h2 {
+    font-size: 28px;
+    margin-bottom: 6px;
+    color: #1f2937;
+}
+
+.form-intro p {
+    color: #6b7280;
+    font-size: 15px;
+}
+
+.page-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+
+.form-container {
+    width: 100%;
+    max-width: 720px;   
+    background: #ffffff;
+    padding: 40px 48px;
+    border-radius: 14px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+}
+
+.form-container h2 {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 28px;
+    color: #1f2937;
+}
+
+
+.register-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-card {
+    width: 100%;
+    max-width: 1040px;       
+    margin: 0 auto 48px;
+    background: #ffffff;
+    padding: 56px 64px;      
+    border-radius: 16px;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.08);
+}
+
+
+
+.logo {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    display: block;
+    margin: auto;
+    transform: scale(2.5); 
+}
+
+h2, .subtitle {
+    text-align: center;
+}
+
+.subtitle {
+    font-size: 15px;
+    color: gray;
+    margin-bottom: 25px;
+    margin-top: -15px;
+}
+
+
+
+.field {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInUp 0.5s ease forwards;
+    margin-bottom: 22px;
+}
+
+.field label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 25px;
+    color: #374151;
+    font-weight: bold;
+}
+
+.field input {
+    width: 100%;
+    height: 48px;
+    padding: 0 14px;
+    font-size: 20px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.field input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37,99,235,0.15);
+}
+
+
+.section-label{
+     font-size: 25px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 4px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text);
+}
+
+select{
+    font-size: 20px;
+    width: 100%;
+    font-weight: lighter;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text);
+}
+
+textarea {
+    font-size: 20px;
+    Width: 100%;
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text);
+    resize: none;
+    height: 100px;
+}
+
+.upload-box {
+    border: 2px dashed var(--border);
+    padding: 14px 8px;         
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 12px;            
+    transition: all 0.3s ease;
+    background: transparent;
+    margin-bottom: 18px;
+}
+
+
+.upload-box:hover {
+    border-color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.upload-icon {
+    font-size: 22px;
+    display: block;
+    margin-bottom: 6px;
+    transition: transform 0.3s ease;
+}
+
+.upload-box:active .upload-icon {
+    transform: scale(0.85);
+}
+
+
+.upload-box.uploaded {
+    border-color: #2563eb;
+    background: rgba(34, 197, 94, 0.08);
+}
+
+.upload-box.uploaded .upload-icon {
+    content: "✔";
+    color: #2563eb;
+    transform: scale(1.2);
+}
+
+.upload-box.uploaded .upload-text {
+    font-weight: 600;
+}
+
+.password-wrapper {
+    position: relative;
+}
+
+.password-wrapper input {
+    padding-right: 44px;
+}
+
+.toggle-eye {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 30px;
+    user-select: none;
+    color: #6b7280;
+}
+
+.toggle-eye:hover {
+    color: #2563eb;
+}
+
+
+.register-btn {
+    width: 100%;
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(to right, #2563eb, #1e40af);
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login-text {
+    text-align: center;
+    font-size: 15px;
+    margin-top: 12px;
+}
+
+
+
+button[type="submit"] {
+    width: 100%;
+    height: 48px;
+    background: #2563eb;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 12px;
+}
+
+button:hover {
+    background: #1e40af;
+}
+
+input, textarea {
+    transition: 
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.25s ease,
+        background-color 0.25s ease;
+}
+
+select {
+    cursor: pointer;
+    background-color: transparent;
+}
+
+
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.15);
+    transform: translateY(-1px);
+    background-color: rgba(34, 197, 94, 0.02);
+}
+
+
+input:hover,
+select:hover,
+textarea:hover {
+    border-color: var(--primary);
+}
+
+
+
+
+input::placeholder,
+textarea::placeholder {
+    transition: opacity 0.2s ease;
+}
+
+input:focus::placeholder,
+textarea:focus::placeholder {
+    opacity: 0.4;
+}
+
+.field:nth-child(1) { animation-delay: 0.1s; }
+.field:nth-child(2) { animation-delay: 0.2s; }
+.field:nth-child(3) { animation-delay: 0.3s; }
+.field:nth-child(4) { animation-delay: 0.4s; }
+.field:nth-child(5) { animation-delay: 0.5s; }
+.field:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-4px); }
+    50% { transform: translateX(4px); }
+    75% { transform: translateX(-4px); }
+    100% { transform: translateX(0); }
+}
+
+.field.error input,
+.field.error select,
+.field.error textarea {
+    border-color: #dc2626;
+    box-shadow: 0 0 0 2px rgba(220,38,38,0.2);
+}
+
+
+.upload-box.error {
+    animation: shake 0.35s;
+    border-color: #ef4444 !important;
+    background: rgba(239, 68, 68, 0.05);
+} */
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+:root {
+  --bg: #f4f6fb;
+  --card: #ffffff;
+  --text: #000;
+  --border: #d1d5db;
+  --primary: #2563eb;
+  font-size: 14px;
+}
+
+a {
+  color: #374151;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f4f6fb;
+  color: var(--text);
+}
+.app-header {
+  position: sticky;
+
+  width: 100%;
+  height: 90px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  margin: 0;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+}
+
+.app-header img {
+  padding-top: 5%;
+  transform: translateX(-35%);
+  height: 170px;
+}
+
+.login-btn:hover {
+  background: #1e40af;
+}
+
+.login-btn {
+  display: flex;
+  align-items: center; /* vertical center */
+  justify-content: center; /* horizontal center */
+
+  height: 40px; /* or your existing height */
+  padding: 0 28px;
+
+  background: #2563eb;
+  color: #ffffff;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.login-btn:hover {
+  background: #1e40af;
+}
+.page-title {
+  text-align: center;
+  margin: 32px 0 18px;
+}
+
+.page-title h2 {
+  font-size: 40px;
+  color: #1f2937;
+  margin-bottom: 6px;
+}
+
+.page-title p {
+  font-size: 20px;
+  color: #6b7280;
+}
+
+.page-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.register-card {
+  width: 100%;
+  max-width: 840px; /* BIGGER but SAFE */
+  margin: 0 auto 48px;
+  background: #ffffff;
+  padding: 56px 64px; /* More breathing room */
+  border-radius: 16px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+}
+
+
+.field {
+  transform: translateY(10px);
+  margin-bottom: 22px;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 20px;
+  color: #374151;
+  font-weight: bold;
+}
+.field.error {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+.field input {
+  width: 100%;
+  height: 40px;
+  padding: 0 px;
+  font-size: 20px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.field input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.section-label {
+  font-size: 20px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 4px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+}
+
+select {
+  font-size: 20px;
+  width: 100%;
+  font-weight: lighter;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+}
+
+textarea {
+  font-size: 20px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  resize: none;
+  height: 100px;
+}
+
+.upload-box {
+  position: relative;
+  border: 2px dashed var(--border);
+  padding: 14px 8px; /* REDUCED HEIGHT */
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 20px; /* SLIGHTLY SMALLER TEXT */
+  transition: all 0.3s ease;
+  background: transparent;
+  margin-bottom: 18px;
+}
+
+.upload-box:hover {
+  border-color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.upload-icon {
+  font-size: 22px;
+  display: block;
+  margin-bottom: 6px;
+  transition: transform 0.3s ease;
+}
+
+.upload-box:active .upload-icon {
+  transform: scale(0.85);
+}
+
+/* SUCCESS STATE */
+.upload-box.uploaded {
+  display: block;
+  border-color: #2563eb;
+  background: rgba(34, 197, 94, 0.08);
+}
+
+.upload-box.uploaded .upload-icon {
+  content: "✔";
+  color: #2563eb;
+  transform: scale(1.2);
+}
+
+.upload-box.uploaded .upload-text {
+  font-weight: 600;
+}
+
+.upload-text {
+  display: block;
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 6px;
+  color: #374151;
+  word-break: break-all;
+}
+
+.upload-remove {
+  position: absolute;
+  display: block;
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  font-size: 18px;
+  color: #dc2626;
+  cursor: pointer;
+    visibility: hidden;
+  z-index: 2;
+}
+
+.upload-box.uploaded .upload-remove {
+  visibility: visible;
+}
+
+.upload-remove i {
+  font-size: 14px;
+  line-height: 1;
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper input {
+  padding-right: 44px;
+}
+
+.toggle-eye {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-55%);
+  cursor: pointer;
+  font-size: 25px;
+  user-select: none;
+  color: #6b7280;
+}
+
+.toggle-eye:hover {
+  color: #2563eb;
+}
+
+.register-btn {
+  width: 100%;
+  margin-top: 15px;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(to right, #2563eb, #1e40af);
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.login-text {
+  text-align: center;
+  font-size: 15px;
+  margin-top: 12px;
+}
+
+/* ================= FIELD ANIMATIONS ================= */
+
+button[type="submit"] {
+  width: 100%;
+  height: 48px;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 12px;
+}
+
+button:hover {
+  background: #1e40af;
+}
+
+input,
+textarea {
+  transition: border-color 0.25s ease, box-shadow 0.25s ease,
+    transform 0.25s ease, background-color 0.25s ease;
+}
+
+select {
+  cursor: pointer;
+  background-color: transparent;
+}
+
+/* ON FOCUS */
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.15);
+  transform: translateY(-1px);
+  background-color: rgba(34, 197, 94, 0.02);
+}
+
+/* HOVER FEEDBACK */
+input:hover,
+select:hover,
+textarea:hover {
+  border-color: var(--primary);
+}
+
+/* PLACEHOLDER FADE */
+input::placeholder,
+textarea::placeholder {
+  transition: opacity 0.2s ease;
+}
+
+input:focus::placeholder,
+textarea:focus::placeholder {
+  opacity: 0.4;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* REMOVED SHAKE ANIMATION */
+
+.field.error input,
+.field.error select,
+.field.error textarea {
+  border-color: #dc2626 !important;
+  box-shadow: 0 0 0 2px rgba(220, 38, 38, 0.2) !important;
+}
+
+/* ================= UPLOAD ERROR ================= */
+
+.upload-box.error {
+  border-color: #ef4444 !important;
+  background: rgba(239, 68, 68, 0.05) !important;
+}
+
+/* Ensure focus states don't override errors */
+.field.error input:focus,
+.field.error select:focus,
+.field.error textarea:focus {
+  border-color: #dc2626 !important;
+  box-shadow: 0 0 0 2px rgba(220, 38, 38, 0.2) !important;
+}
+
+/* ================= SHAKE ANIMATION ================= */
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-4px);
+  }
+  50% {
+    transform: translateX(4px);
+  }
+  75% {
+    transform: translateX(-4px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.shake {
+  animation: shake 0.35s;
+}
+
+.field.shake input,
+.field.shake select,
+.field.shake textarea {
+  animation: shake 0.35s;
+}
+
+.upload-box.shake {
+  animation: shake 0.35s;
+}
+
+/* UPDATE upload box error to include shake */
+.upload-box.error {
+  animation: shake 0.35s;
+  border-color: #ef4444 !important;
+  background: rgba(239, 68, 68, 0.05) !important;
+}

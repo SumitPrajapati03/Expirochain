@@ -1,0 +1,62 @@
+# =====================================================================
+# EXPIROCHAIN - Git Ignore Rules
+# =====================================================================
+
+# 1. Sensitive Configuration & Secrets (CRITICAL)
+config.php
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.cert
+*.crt
+
+# 2. User Uploads & KYC Verification Documents
+# Keep folder structure via .gitkeep, but never track private user files
+uploads/*
+!uploads/.gitkeep
+temp_uploads/*
+!temp_uploads/.gitkeep
+
+# 3. Scratch & Temporary Files
+code
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+*~
+
+# 4. OS-Generated Files
+Thumbs.db
+[Dd]esktop.ini
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+
+# 5. IDE & Code Editor Files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+nbproject/
+
+# 6. Local Database Backups & Dumps
+database/*.bak
+database/*.backup
+*.sqlite
+*.db
+
+# 7. Package Manager & Local Build Caches
+node_modules/
+vendor/
+.phpunit.result.cache
+

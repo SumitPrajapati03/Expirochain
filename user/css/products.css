@@ -1,0 +1,416 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f4f6f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* container */
+
+.container {
+    width: 95%;
+    max-width: 1500px;
+    margin: 40px auto;
+}
+
+/* card */
+
+.products-card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* header row */
+
+.products-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* BUTTON ALIGNMENT FIX */
+
+.products-header div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* title */
+
+.products-header h2 {
+    margin: 0;
+    font-size: 30px;
+    color: #1d4ed8;
+    font-weight: 700;
+}
+
+/* add product button */
+
+.add-product-btn {
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    color: white;
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    display: inline-block;
+    transition: all 0.25s ease;
+    box-shadow: 0 2px 6px rgba(37, 99, 235, 0.25);
+}
+
+.add-product-btn:hover {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35);
+}
+
+/* Export button style */
+
+.export-btn {
+    background: linear-gradient(135deg, #16a34a, #15803d);
+    color: white;
+    padding: 12px 21px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    display: inline-block;
+    transition: all 0.25s ease;
+    box-shadow: 0 2px 6px rgba(22, 163, 74, 0.25);
+    border: none;
+    cursor: pointer;
+}
+
+.export-btn:hover {
+    background: linear-gradient(135deg, #15803d, #166534);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(22, 163, 74, 0.35);
+}
+
+/* TABLE DESIGN */
+
+table.dataTable {
+    width: 100% !important;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* table header */
+
+#productTable thead {
+    background: #1d4ed8;
+    color: white;
+}
+
+#productTable thead th {
+    text-align: center;
+    padding: 13px;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+}
+
+/* rounded header corners */
+
+#productTable thead th:first-child {
+    border-top-left-radius: 10px;
+}
+
+#productTable thead th:last-child {
+    border-top-right-radius: 10px;
+}
+
+/* table body */
+
+#productTable tbody td {
+    padding: 12px;
+    font-size: 16px;
+    border-bottom: 1px solid #e2e8f0;
+    text-align: center;
+}
+
+/* rounded bottom corners */
+
+#productTable tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 12px;
+}
+
+#productTable tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 12px;
+    border-bottom: none;
+}
+
+/* row hover */
+
+#productTable tbody tr:hover {
+    background: #f8fafc;
+}
+
+/* FontAwesome icons */
+
+.tick {
+    color: #16a34a;
+    font-size: 18px;
+}
+
+.cross {
+    color: #dc2626;
+    font-size: 18px;
+}
+
+/* datatable search */
+
+.dataTables_filter {
+    margin-bottom: 15px;
+}
+
+.dataTables_filter input {
+    padding: 8px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 14px;
+    background: #f8fafc;
+}
+
+.dataTables_filter input:focus {
+    outline: none;
+    border-color: #2563eb;
+    background: white;
+}
+
+/* show entries */
+
+.dataTables_length select {
+    padding: 5px 8px;
+    border-radius: 6px;
+    border: 1px solid #cbd5e1;
+}
+
+/* pagination */
+
+.dataTables_paginate {
+    margin-top: 15px;
+}
+
+.dataTables_paginate .paginate_button {
+    padding: 6px 12px;
+    margin: 0 2px;
+    border-radius: 6px;
+    border: none;
+    background: #e2e8f0;
+}
+
+.dataTables_paginate .paginate_button.current {
+    background: #2563eb;
+    color: white !important;
+}
+
+.dataTables_paginate .paginate_button:hover {
+    background: #1d4ed8;
+    color: white !important;
+}
+
+/* footer */
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* EXPORT POPUP */
+
+/* .export-popup{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.35);
+align-items:center;
+justify-content:center;
+z-index:9999;
+}
+
+.export-modal{
+background:#fff;
+padding:30px;
+border-radius:12px;
+width:320px;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+.export-modal h3{
+margin-top:0;
+margin-bottom:10px;
+}
+
+.choose-text{
+color:#555;
+font-size:14px;
+margin-bottom:15px;
+}
+
+.export-modal label{
+display:block;
+padding:8px 0;
+cursor:pointer;
+font-size:15px;
+}
+
+.export-modal input{
+margin-right:10px;
+}
+
+.popup-actions{
+margin-top:20px;
+text-align:right;
+}
+
+.cancel-btn{
+background:none;
+border:none;
+color:#555;
+margin-right:10px;
+cursor:pointer;
+}
+
+.ok-btn{
+background:#2563eb;
+border:none;
+color:white;
+padding:8px 16px;
+border-radius:6px;
+cursor:pointer;
+}
+
+.ok-btn:hover{
+background:#1d4ed8;
+} */
+
+/* ===== COMMON TABLE CARD (same as Products) ===== */
+.products-card {
+    background: #f9fafb;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* ===== HEADER ===== */
+.products-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.products-header h2 {
+    color: #2563eb;
+    font-weight: 600;
+}
+
+/* ===== EXPORT BUTTON ===== */
+.export-btn {
+    background: #16a34a;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.export-btn:hover {
+    background: #15803d;
+}
+
+/* ===== DATATABLE FIX ===== */
+.dataTables_wrapper .dataTables_length,
+.dataTables_wrapper .dataTables_filter {
+    margin-bottom: 10px;
+}
+
+/* ===== TABLE DESIGN (MAIN PART) ===== */
+#logTable {
+    width: 100% !important;
+    border-collapse: separate !important;
+    border-spacing: 0 8px; /* spacing between rows */
+}
+
+/* HEADER */
+#logTable thead th {
+    background: #1d4ed8;
+    color: white;
+    padding: 12px;
+    border: none;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* ROUNDED HEADER */
+#logTable thead th:first-child {
+    border-top-left-radius: 10px;
+}
+#logTable thead th:last-child {
+    border-top-right-radius: 10px;
+}
+
+/* ROW STYLE */
+#logTable tbody tr {
+    background: white;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+    text-align: center;
+}
+
+/* CELL STYLE */
+#logTable tbody td {
+    padding: 12px;
+    border: none;
+}
+
+/* REMOVE DEFAULT DATATABLE BORDERS */
+table.dataTable.no-footer {
+    border-bottom: none !important;
+}
+
+/* PAGINATION ALIGN */
+.dataTables_paginate {
+    margin-top: 10px;
+}
+
+/* ===== MODERN MINIMAL BADGES ===== */
+.badge {
+    display: inline-block;
+    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 999px;
+    background: #f3f4f6;
+    color: #374151;
+}
+
+/* Action types (soft colors, not loud) */
+.badge-transfer {
+    background: #e0edff;
+    color: #2563eb;
+}
+
+.badge-dispose {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+.badge-sale {
+    background: #dcfce7;
+    color: #16a34a;
+}

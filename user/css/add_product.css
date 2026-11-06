@@ -1,0 +1,106 @@
+.add-product-card {
+    max-width: 650px;
+    margin: auto;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* heading */
+.add-product-card h2 {
+    color: #2563eb;
+    margin-bottom: 20px;
+    font-size: 27px;
+}
+
+/* labels */
+.add-product-card label {
+    display: block;
+    margin-top: 16px;
+    margin-bottom: 6px;
+    font-size: 16px;
+    font-weight: 650;
+    color: #334155;
+}
+
+/* inputs */
+.add-product-card input,
+.add-product-card select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+/* focus */
+.add-product-card input:focus,
+.add-product-card select:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+}
+
+/* checkbox */
+.checkbox-row {
+    margin-top: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #334155;
+}
+
+.checkbox-row input {
+    width: 16px;
+    height: 16px;
+}
+
+/* buttons */
+.form-buttons {
+    margin-top: 25px;
+    display: flex;
+    gap: 12px;
+}
+
+/* add button */
+.btn-add {
+    flex: 1;
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-add:hover {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35);
+}
+
+/* reset button */
+.btn-reset {
+    flex: 1;
+    background: #7b7a7a;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-reset:hover {
+    background: linear-gradient(135deg, #7b7a7a, #747474);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(123, 123, 124, 0.35);
+    background: #747474;
+}

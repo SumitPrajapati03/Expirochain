@@ -1,0 +1,260 @@
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  margin-top: 18px;
+  font-size: 18px;
+}
+
+.admin-table thead th {
+  text-align: left;
+  padding: 14px 12px;
+  color: #192a45;
+  font-weight: 600;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.admin-table tbody tr {
+  transition: all 0.18s ease;
+}
+
+.admin-table td {
+  padding: 14px 12px;
+  border-bottom: 1px solid #edf0f3;
+  color: #21375b;
+}
+
+.admin-table button {
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-right: 6px;
+}
+
+/* Edit button */
+
+.admin-table button:first-child {
+  background: #2563eb;
+  color: white;
+  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.25);
+}
+
+/* Hover effects */
+
+.admin-table button:first-child:hover {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35);
+}
+
+.register-card {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 48px;
+  background: #ffffff;
+  padding: 36px 64px;
+  border-radius: 16px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+}
+
+/* Critical expiry (0-7 days) */
+
+.critical-expiry {
+  background: #fee2e2;
+}
+
+.critical-expiry td {
+  color: #991b1b;
+  font-weight: 600;
+}
+
+
+/* Warning expiry (8-30 days) */
+
+.warning-expiry {
+  background: #fff7ed;
+}
+
+.warning-expiry td {
+  color: #9a3412;
+  font-weight: 600;
+}
+
+.risk-badge {
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+.critical {
+  background: #ef4444;
+  color: white;
+}
+
+.warning {
+  background: #f97316;
+  color: white;
+}
+
+.admin-table th:nth-child(1),
+.admin-table td:nth-child(1) {
+  width: 32%;
+}
+
+.admin-table th:nth-child(2),
+.admin-table td:nth-child(2) {
+  width: 15%;
+}
+
+.admin-table th:nth-child(3),
+.admin-table td:nth-child(3) {
+  width: 10%;
+}
+
+.admin-table th:nth-child(4),
+.admin-table td:nth-child(4) {
+  width: 15%;
+}
+
+.admin-table th:nth-child(5),
+.admin-table td:nth-child(5) {
+  width: 13%;
+}
+
+.admin-table th:nth-child(6),
+.admin-table td:nth-child(6) {
+  width: 15%;
+}
+
+.section-heading {
+  font-size: 26px;
+  font-weight: 700;
+  color: #0D204F;
+  margin: 30px 0 15px 0;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #c0c3c8;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 999;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background: #ffffff;
+  padding: 30px 35px;
+  border-radius: 12px;
+  width: 420px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
+  animation: popupFade 0.2s ease;
+}
+
+.popup-content h3 {
+  margin-bottom: 20px;
+  font-size: 29px;
+  color: #0D204F;
+  font-weight: 700;
+}
+
+.popup-content label {
+  display: block;
+  margin-top: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #21375b;
+}
+
+.popup-content input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+}
+
+.popup-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* BOTH BUTTONS TAKE EQUAL WIDTH */
+
+.popup-buttons button {
+  flex: 1;
+  padding: 10px 0;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* SUBMIT BUTTON */
+
+.popup-content button[type="submit"] {
+  background: #2563eb;
+  color: white;
+}
+
+/* CANCEL BUTTON */
+
+.popup-content button[type="button"] {
+  background: #6b7280;
+  color: white;
+}
+
+/* HOVER EFFECT */
+
+.popup-content button[type="submit"]:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.35);
+}
+
+.popup-content button[type="button"]:hover {
+  background: #4b5563;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes popupFade {
+  from {
+    opacity: 0;
+    /* transform: translateY(-10px); */
+    transform: scale(0.5);
+  }
+
+  to {
+    opacity: 1;
+    /* transform: translateY(0); */
+    transform: scale(1);
+  }
+}
+
+.revoke-btn {
+    background: #ef4444;
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.revoke-btn:hover {
+    background: #dc2626;
+}

@@ -1,0 +1,49 @@
+/* ACCOUNT CARD */
+.account-card {
+    max-width: 650px;
+    margin: auto;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* HEADING */
+.account-card h2 {
+    color: #2563eb;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+/* GRID */
+.account-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+}
+
+/* LABEL */
+.field label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 16px;
+    font-weight: 650;
+    color: #334155;
+}
+
+/* VALUE BOX */
+.value {
+    width: 100%;
+    padding: 12px;
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #0f172a;
+    box-sizing: border-box;
+}
+
+/* ADDRESS FULL WIDTH */
+.field.full {
+    grid-column: 1 / -1;
+}
